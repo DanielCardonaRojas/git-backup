@@ -32,6 +32,7 @@ _git-backup ()
 				'restore:Restore a branch from the bundles backup directory.'
 				'save:Save a branch as a bundle to the backup directory.'
 				'list:List branches that have been backed up as a bundle file.'
+				'open:Go to the directory containing all bundles associated with the current repo.'
 			)
 			_describe -t commands 'git backup' subcommands
 		;;

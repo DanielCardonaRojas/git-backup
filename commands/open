@@ -1,0 +1,18 @@
+#!/bin/bash
+
+REPO_PATH=$(git rev-parse --show-toplevel)
+
+# Derive the repository name from the provided path
+
+REPO_NAME=$(basename "$REPO_PATH")
+BACKUP_DIR="/tmp/repo_backups/$REPO_NAME"
+
+# If BACKUP_DIR does not exist print a message and exit
+
+if [ ! -d "$BACKUP_DIR" ]; then
+    echo "No backups created yet. $BACKUP_DIR does not exist"
+    exit 1
+else
+    cd "$BACKUP_DIR"
+fi
+
